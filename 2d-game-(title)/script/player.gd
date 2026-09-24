@@ -5,15 +5,13 @@ const SPEED = 300.0
 
 
 func _physics_process(delta: float) -> void:
-
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	look_at(get_global_mouse_position())
+	process_movement()
+	move_and_slide()
 
 func process_movement() -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right", "up", "down")
+	var direction := Input.get_vector("left", "right", "up","down")
 	
-	move_and_slide()
+	velocity = direction * SPEED

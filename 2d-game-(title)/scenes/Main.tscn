@@ -2,7 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://c7mcglt0ui5v8" path="res://scenes/Player.tscn" id="1_elqb8"]
 
+[sub_resource type="QuadMesh" id="QuadMesh_g4v7s"]
+
 [node name="Main" type="Node2D" unique_id=2073037914]
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1871208025]
+modulate = Color(0.1437287, 0.7312746, 0, 1)
+position = Vector2(590.5, 272)
+scale = Vector2(1777.0001, 999.99994)
+mesh = SubResource("QuadMesh_g4v7s")
+
 [node name="Player" parent="." unique_id=1992645627 instance=ExtResource("1_elqb8")]
-position = Vector2(593, 342)
