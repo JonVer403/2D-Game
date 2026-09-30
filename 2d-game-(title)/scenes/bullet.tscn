@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b3d3qbvx8n7au"]
+
+[ext_resource type="Texture2D" uid="uid://b5g3ki0jlaako" path="res://assets/images/Guns/bulletDemo.png" id="1_mkf8s"]
+
+[node name="Bullet" type="Sprite2D" unique_id=118912413]
+z_index = -1
+texture_filter = 1
+texture = ExtResource("1_mkf8s")

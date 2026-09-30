@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bobjh5fa5o18u"]
+
+[ext_resource type="Texture2D" uid="uid://blsmf3b8jjl2b" path="res://assets/images/Guns/akDemo.png" id="1_0sx7r"]
+[ext_resource type="Script" uid="uid://lqvlciqm6acx" path="res://scenes/ak_47.gd" id="1_4gaom"]
+
+[node name="AK-47" type="Node2D" unique_id=4376810]
+script = ExtResource("1_4gaom")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=281902332]
+texture = ExtResource("1_0sx7r")
+
+[node name="shoot_pos" type="Marker2D" parent="Sprite2D" unique_id=2100333040]
+position = Vector2(20.496058, -0.440423)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1826226915]
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
